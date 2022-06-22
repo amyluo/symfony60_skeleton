@@ -37,6 +37,7 @@ services:
       - SYMFONY_DATABASE_NAME=db_test
       - SYMFONY_DATABASE_USER=user_test
     volumes:
+      - ./bash_files/.bashrc:/root/.bashrc
       - ./:/app
     depends_on:
       - mysql
@@ -58,6 +59,7 @@ services:
 #      - ALLOW_EMPTY_PASSWORD=yes
 ##      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL,CONFIG
 #    volumes:
+#      - ./bash_files/.bashrc:/root/.bashrc
 #      - redis_data:/bitnami/redis/data
 #    networks:
 #      - symfony_network
